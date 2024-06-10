@@ -7,7 +7,7 @@ export type GuestSlice = {
 
 export const createGuestSlice: StateCreator<GuestSlice> = ((set) => ({
     guestCount: 0,
-    setGuestCount: (guestCount) => (set((state) => ({
+    setGuestCount: (guestCount) => ({
         guestCount: guestCount > 0 ? guestCount : 0
-    })))
+    })
 }))
