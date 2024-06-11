@@ -26,10 +26,8 @@ export const WeddingInvitationPage = () => {
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement> ) => {
     event.preventDefault();
-
     console.log({ firstName, lastName, guestCount, eventDate, isConfirmed });
   }
-
 
   return (
     <>
