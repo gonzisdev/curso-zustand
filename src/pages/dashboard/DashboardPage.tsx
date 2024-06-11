@@ -1,13 +1,14 @@
 import { IoAccessibilityOutline, IoHeartOutline, IoListOutline, IoLockClosedOutline, IoPawOutline } from 'react-icons/io5';
 import { WhiteCard } from '../../components';
 import { useBearStore, usePersonStore, useTaskStore } from '../../stores';
+import { useWeddingBoundStore } from '../../stores/wedding';
 
 export const Dashboard = () => {
 
   const totalBears = useBearStore(state => state.computed.totalBears)
   const firstName = usePersonStore(state => state.firstName)
   const tasks = useTaskStore(state => state.tasks)
-
+  const guestCount = useWeddingBoundStore(state => state.guestCount)
   const taskCount = Object.keys(tasks).length
 
   return (
@@ -38,7 +39,7 @@ export const Dashboard = () => {
         <WhiteCard centered>
           <IoHeartOutline size={ 50 } className="text-indigo-600" />
           <h2>Boda</h2>
-          <p>Información</p>
+          <p>{guestCount}</p>
         </WhiteCard>
 
         <WhiteCard centered>
