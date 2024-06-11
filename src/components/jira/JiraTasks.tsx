@@ -1,9 +1,9 @@
-import { SingleTask } from './SingleTask';
-import type { Task, TaskStatus } from '../../types';
-import { IoAddOutline, IoCheckmarkCircleOutline } from 'react-icons/io5';
-import { useTaskHook } from '../../hooks/useTaskHook';
+import { SingleTask } from './SingleTask'
+import type { Task, TaskStatus } from '../../types'
+import { IoAddOutline, IoCheckmarkCircleOutline } from 'react-icons/io5'
+import { useTaskHook } from '../../hooks/useTaskHook'
 
-interface Props {
+type Props = {
   title: string
   tasks: Task[]
   status: TaskStatus
@@ -43,5 +43,5 @@ export const JiraTasks = ({ title, status, tasks }: Props) => {
         }
       </div>
     </div>
-  );
-};
+  )
+}

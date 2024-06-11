@@ -1,16 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
-
 import { Root } from '../Root';
 import { AuthLayout, DashboardLayout } from '../layouts';
 import { BearPage, Dashboard, JiraPage, LoginPage, PersonPage, WeddingInvitationPage } from '../pages';
 
-
-export const router = createBrowserRouter( [
+export const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
     children: [
-      /// Dashboard Routes
+      // Dashboard Routes
       {
         path: 'dashboard',
         element: <DashboardLayout />,
@@ -38,8 +36,7 @@ export const router = createBrowserRouter( [
 
         ]
       },
-
-      /// Auth Routes
+      // Auth Routes
       {
         path: 'auth',
         element: <AuthLayout />,
@@ -54,4 +51,4 @@ export const router = createBrowserRouter( [
 
     ],
   },
-] );
+])

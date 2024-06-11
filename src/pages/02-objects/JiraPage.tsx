@@ -1,5 +1,5 @@
-import { JiraTasks } from '../../components';
-import { useTaskStore } from '../../stores';
+import { JiraTasks } from '../../components'
+import { useTaskStore } from '../../stores'
 
 export const JiraPage = () => {
 
@@ -19,5 +19,5 @@ export const JiraPage = () => {
           <JiraTasks title='Terminadas' tasks={doneTasks} status='done' />
       </div>
     </>
-  );
-};
+  )
+}

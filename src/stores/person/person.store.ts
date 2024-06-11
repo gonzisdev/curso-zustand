@@ -1,6 +1,7 @@
 import { type StateCreator, create } from "zustand"
 import { devtools, persist } from "zustand/middleware"
 import { customSessionStorage } from "../storages/session-storage.storage"
+import { useWeddingBoundStore } from "../wedding"
 
 type PersonState = {
     firstName: string
@@ -27,3 +28,9 @@ export const usePersonStore = create<PersonState>()(
         )
     ) 
 )
+
+usePersonStore.subscribe((nextState, /*prevState*/) => {
+    const {firstName, lastName} = nextState
+    useWeddingBoundStore.getState().setFirstName(firstName)
+    useWeddingBoundStore.getState().setLastName(lastName)
+})

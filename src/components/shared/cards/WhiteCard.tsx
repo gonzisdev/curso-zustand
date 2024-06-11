@@ -1,11 +1,10 @@
-import classNames from 'classnames';
+import classNames from 'classnames'
 
 interface Props {
-  children?: React.ReactNode;
-  centered?: boolean;
-  className?: string;
+  children?: React.ReactNode
+  centered?: boolean
+  className?: string
 }
-
 
 export const WhiteCard = ( { children, centered, className }: Props ) => {
   return (
@@ -16,5 +15,5 @@ export const WhiteCard = ( { children, centered, className }: Props ) => {
       } ) }>
       { children }
     </div>
-  );
-};
+  )
+}

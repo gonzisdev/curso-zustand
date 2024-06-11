@@ -1,6 +1,5 @@
-import { WhiteCard } from '../../components';
-import { usePersonStore } from '../../stores';
-
+import { WhiteCard } from '../../components'
+import { usePersonStore } from '../../stores'
 
 export const PersonPage = () => {
 
@@ -67,5 +66,5 @@ export const PersonPage = () => {
         </div>
       </WhiteCard>
     </>
-  );
-};
+  )
+}

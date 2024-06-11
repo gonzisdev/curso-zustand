@@ -1,14 +1,12 @@
+import type { IconType } from 'react-icons'
+import { NavLink } from 'react-router-dom'
 
-import type { IconType } from 'react-icons';
-import { NavLink } from 'react-router-dom';
-
-interface Props {
-  href: string;
-  Icon: IconType;
-  title: string;
+type Props = {
+  href: string
+  Icon: IconType
+  title: string
   subTitle: string
 }
-
 
 export const SideMenuItem = ({ href, Icon, title, subTitle }: Props) => {
   return (
@@ -25,5 +23,5 @@ export const SideMenuItem = ({ href, Icon, title, subTitle }: Props) => {
         <span className="text-sm text-white/50 hidden md:block">{ subTitle }</span>
       </div>
     </NavLink>
-  );
+  )
 }
